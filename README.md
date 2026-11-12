@@ -5,8 +5,8 @@ Optimization to Deep Q-Learning Across Configurations and Environments** (Roger 
 
 The study takes the component analysis of a hybrid quantum-classical reinforcement-learning agent (output reuse, data reuploading depth, entanglement), published for
 PPO on CartPole, and asks which of its findings hold under DQN, on CartPole and on FrozenLake, against classical controls matched in parameters and in information, and
-against classical models that represent the same class of functions as the circuit. It also shows that output reuse followed by a linear layer is a multiplication of the learning rate
-of that layer, and tests that prediction. All experiments use [SimplyQRL](https://github.com/javier-lazaro/SimplyQRL), vendored here without modification.
+against classical models that represent the same class of functions as the circuit. It also shows that output reuse followed by a linear layer is equivalent to multiplying the learning rate
+of the weights of that layer by R, and tests that prediction. All experiments use [SimplyQRL](https://github.com/javier-lazaro/SimplyQRL), vendored here without modification.
 
 > The previous repository, `RogerMas99/qrl-dissection`, is archived and public: it holds the history of the work. This repository is the clean version of the code, with the names of the thesis.
 
