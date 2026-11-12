@@ -1,0 +1,29 @@
+# Pilot of the capacity ladder with 60,000 steps (no tables in the study).
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "pilot_60k"
+description = "Pilot of the capacity ladder with 60,000 steps (no tables in the study)."
+
+[[stage]]
+name = "pilot_60k_cartpole_1"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["large_network", "matched_control", "reference_control"]
+seeds = "1-3"
+steps = 60000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "pilot_60k_cartpole_2"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["large_network", "matched_control", "reference_control"]
+seeds = "1-3"
+steps = 60000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or the data of results/, please cite it as below."
+title: "QuantumRL-dissection: component-based evaluation of parametrized quantum circuits in reinforcement learning, from PPO to DQN"
+type: software
+version: 1.0.0
+authors:
+  - family-names: "Mas Bosch"
+    given-names: "Roger"
+    affiliation: "Universitat Oberta de Catalunya"
+license: MIT
+repository-code: "https://github.com/RogerMas99/QuantumRL-dissection"
+abstract: >-
+  Code, configurations and per-run results of a master's thesis that ports the component analysis of a hybrid quantum-classical
+  reinforcement learning agent (output reuse, data reuploading, entanglement) from PPO to DQN on CartPole and FrozenLake, compares it
+  with classical controls matched in parameters and in information, and tests whether a classical model can represent what the circuit
+  represents. The code is released with the thesis "A Component-Based Evaluation of Parametrized Quantum Circuits: from Proximal Policy
+  Optimization to Deep Q-Learning Across Configurations and Environments" (R. Mas Bosch, UOC, 2026).
+keywords:
+  - quantum reinforcement learning
+  - parametrized quantum circuits
+  - deep Q-learning
+  - proximal policy optimization
+  - output reuse
+  - data reuploading

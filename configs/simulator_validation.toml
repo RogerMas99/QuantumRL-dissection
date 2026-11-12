@@ -1,0 +1,55 @@
+# Validation of the simulators against the real circuit (simulator runs; never the real circuit).
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "simulator_validation"
+description = "Validation of the simulators against the real circuit (simulator runs; never the real circuit)."
+
+simulated = true
+
+[[stage]]
+name = "emulator_reference"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_emulator_hybrid_unentangled"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[stage]]
+name = "validation_battery_cartpole"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_emulator_hybrid_unentangled_depth1", "sim_emulator_hybrid_unentangled_depth2", "sim_emulator_hybrid_unentangled_reuse16", "sim_emulator_hybrid_unentangled_reuse32", "sim_emulator_hybrid_unentangled_reuse4", "sim_emulator_hybrid_unentangled_reuse8", "sim_emulator_porting_skolik_4q_depth2_unentangled", "sim_emulator_porting_skolik_4q_depth5_unentangled", "sim_statevector_hybrid", "sim_statevector_hybrid_depth1", "sim_statevector_hybrid_depth1_reuse16", "sim_statevector_hybrid_depth1_reuse32", "sim_statevector_hybrid_depth1_reuse4", "sim_statevector_hybrid_depth1_reuse8", "sim_statevector_hybrid_depth2", "sim_statevector_hybrid_depth2_reuse16", "sim_statevector_hybrid_depth2_reuse32", "sim_statevector_hybrid_depth2_reuse4", "sim_statevector_hybrid_depth2_reuse8", "sim_statevector_hybrid_reuse16", "sim_statevector_hybrid_reuse32", "sim_statevector_hybrid_reuse4", "sim_statevector_hybrid_reuse8", "sim_statevector_hybrid_unentangled", "sim_statevector_porting_skolik_4q_depth1", "sim_statevector_porting_skolik_4q_depth2", "sim_statevector_porting_skolik_4q_depth5", "sim_statevector_porting_skolik_8q_depth1", "sim_statevector_porting_skolik_8q_depth2", "sim_statevector_porting_skolik_8q_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[stage]]
+name = "validation_battery_frozenlake_1"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_emulator_frozenlake_binary_unentangled_depth1", "sim_emulator_frozenlake_binary_unentangled_depth5", "sim_emulator_frozenlake_scalar_depth10", "sim_emulator_frozenlake_scalar_depth15", "sim_emulator_frozenlake_scalar_depth5", "sim_statevector_frozenlake_binary_depth1", "sim_statevector_frozenlake_binary_unentangled_depth1", "sim_statevector_frozenlake_binary_unentangled_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[stage]]
+name = "validation_battery_frozenlake_2"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_statevector_frozenlake_binary_depth5"]
+seeds = "1-20"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20

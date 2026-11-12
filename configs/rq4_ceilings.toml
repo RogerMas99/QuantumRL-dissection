@@ -1,0 +1,29 @@
+# RQ4: additive Fourier ceilings of the unentangled circuits (CartPole and FrozenLake).
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq4_ceilings"
+description = "RQ4: additive Fourier ceilings of the unentangled circuits (CartPole and FrozenLake)."
+
+[[stage]]
+name = "cartpole_ceiling"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["fourier_ceiling"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[stage]]
+name = "frozenlake_ceilings"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_binary_linear_ceiling", "frozenlake_scalar_ceiling_depth1", "frozenlake_scalar_ceiling_depth10", "frozenlake_scalar_ceiling_depth15", "frozenlake_scalar_ceiling_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20

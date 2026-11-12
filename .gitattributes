@@ -1,0 +1,7 @@
+* text=auto
+# The vendored library must stay byte-identical to upstream (checked by tests/test_vendored_integrity.py); the data of results/ keeps its bytes.
+third_party/simplyqrl/* -text
+results/** -text
+tests/data/** -text
+*.csv.gz binary
+*.pdf binary

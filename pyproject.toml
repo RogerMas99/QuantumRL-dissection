@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantumrl-dissection"
+version = "1.0.0"
+description = "Component-based evaluation of parametrized quantum circuits in reinforcement learning: from PPO to DQN, across configurations and environments"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Roger Mas Bosch" }]
+
+# SimplyQRL is vendored, unmodified, at third_party/simplyqrl (revision b534cc9). The adjustments that this work
+# applies to it live in src/quantumrl_dissection/training/adjustments.py and are applied at import time.
+dependencies = [
+    "gymnasium==1.1.1",
+    "torch>=2.6,<3.0",
+    "pennylane==0.41.1",
+    "pennylane-lightning==0.41.1",
+    "autoray==0.7.1",
+    "numpy>=2.0",
+    "pandas",
+    "matplotlib",
+    "tqdm",
+    "tensorboard",
+    "cloudpickle",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+package-dir = { "" = "src", "simplyqrl" = "third_party/simplyqrl" }
+packages = [
+    "simplyqrl",
+    "quantumrl_dissection",
+    "quantumrl_dissection.agents",
+    "quantumrl_dissection.analysis",
+    "quantumrl_dissection.simulators",
+    "quantumrl_dissection.training",
+    "quantumrl_dissection.circuits",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

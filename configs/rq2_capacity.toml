@@ -1,0 +1,29 @@
+# RQ2: the capacity ladder against the hybrid agent, and the classical twin.
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq2_capacity"
+description = "RQ2: the capacity ladder against the hybrid agent, and the classical twin."
+
+[[stage]]
+name = "capacity_ladder"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid", "large_network", "matched_control", "reference_control"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "classical_twin"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["classical_twin", "classical_twin_reuse16", "classical_twin_reuse32", "classical_twin_reuse4", "classical_twin_reuse8", "classical_twin_unbounded", "classical_twin_unbounded_reuse16", "classical_twin_unbounded_reuse32", "classical_twin_unbounded_reuse4", "classical_twin_unbounded_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5

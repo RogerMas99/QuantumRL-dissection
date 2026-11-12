@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+# raw artefacts of runs (written to the directory given to scripts/run.py; the derived data is in results/)
+runs/
+tensorboard/
+*.manifest.json
+*_trace.npy
+*_weights.pt
+# outputs of scripts/make_tables.py and scripts/make_figures.py
+/tables/
+/figures/

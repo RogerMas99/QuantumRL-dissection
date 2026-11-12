@@ -1,0 +1,29 @@
+# Ablation of the terminal adjustment: the arms of the capacity and FrozenLake experiments with the adjustment disabled.
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "terminal_ablation"
+description = "Ablation of the terminal adjustment: the arms of the capacity and FrozenLake experiments with the adjustment disabled."
+
+[[stage]]
+name = "capacity_ladder_no_terminal_adjustment"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid", "large_network", "matched_control", "reference_control"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "frozenlake_arms_no_terminal_adjustment"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_large_network_scalar", "frozenlake_matched_control", "frozenlake_onehot_reference"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 20

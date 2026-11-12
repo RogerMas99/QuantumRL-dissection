@@ -1,0 +1,17 @@
+# RQ1: the 24 configurations of the reference study run under DQN without modification (the classical control of the reference study is the reference control).
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq1_porting"
+description = "RQ1: the 24 configurations of the reference study run under DQN without modification (the classical control of the reference study is the reference control)."
+
+[[stage]]
+name = "porting"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["porting_hsiao_reuse16", "porting_hsiao_reuse16_entangled", "porting_hsiao_reuse32", "porting_hsiao_reuse4", "porting_hsiao_reuse4_entangled", "porting_hsiao_reuse8", "porting_salinas_1q_depth1", "porting_salinas_1q_depth2", "porting_salinas_1q_depth5", "porting_salinas_2q_depth1", "porting_salinas_2q_depth2", "porting_salinas_2q_depth5", "porting_skolik_4q_depth1", "porting_skolik_4q_depth2", "porting_skolik_4q_depth2_unentangled", "porting_skolik_4q_depth5", "porting_skolik_4q_depth5_unentangled", "porting_skolik_8q_depth1", "porting_skolik_8q_depth2", "porting_skolik_8q_depth5", "reference_control", "reference_control_reuse16", "reference_control_reuse32", "reference_control_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20

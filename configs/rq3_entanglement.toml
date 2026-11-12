@@ -1,0 +1,29 @@
+# RQ3: entanglement; every arm of the depth and reuse sweeps has an unentangled counterpart.
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq3_entanglement"
+description = "RQ3: entanglement; every arm of the depth and reuse sweeps has an unentangled counterpart."
+
+[[stage]]
+name = "depth_sweep_unentangled"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_unentangled", "hybrid_unentangled_depth1", "hybrid_unentangled_depth2"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "reuse_sweep_unentangled"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_unentangled", "hybrid_unentangled_reuse16", "hybrid_unentangled_reuse32", "hybrid_unentangled_reuse4", "hybrid_unentangled_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20

@@ -1,0 +1,83 @@
+# Output reuse against the learning rate of the head: DQN (classical twin, hybrid on the state-vector simulator, classical models that contain output reuse, networks on the bits) and PPO.
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "lr_experiment"
+description = "Output reuse against the learning rate of the head: DQN (classical twin, hybrid on the state-vector simulator, classical models that contain output reuse, networks on the bits) and PPO."
+
+[[stage]]
+name = "bits_networks"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_bits_network_w12", "frozenlake_bits_network_w6"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+diagnostics = true
+
+[[stage]]
+name = "ceiling_with_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["fourier_ceiling", "fourier_ceiling_distinct", "fourier_ceiling_distinct_lr_x2", "fourier_ceiling_distinct_lr_x2_collapsed"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+diagnostics = true
+arm_overrides.fourier_ceiling = { lr_classical = true, lr_classical_R = 2 }
+
+[[stage]]
+name = "dqn_simulator_hybrid"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_statevector_hybrid", "sim_statevector_hybrid_collapsed16", "sim_statevector_hybrid_collapsed32", "sim_statevector_hybrid_collapsed4", "sim_statevector_hybrid_collapsed8", "sim_statevector_hybrid_grad_x32", "sim_statevector_hybrid_grad_x8", "sim_statevector_hybrid_head_lr_x128", "sim_statevector_hybrid_head_lr_x16", "sim_statevector_hybrid_head_lr_x2", "sim_statevector_hybrid_head_lr_x32", "sim_statevector_hybrid_head_lr_x4", "sim_statevector_hybrid_head_lr_x64", "sim_statevector_hybrid_head_lr_x8", "sim_statevector_hybrid_reuse16", "sim_statevector_hybrid_reuse32", "sim_statevector_hybrid_reuse4", "sim_statevector_hybrid_reuse8"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+diagnostics = true
+
+[[stage]]
+name = "dqn_twin"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["classical_twin", "classical_twin_all_lr_x0p5", "classical_twin_all_lr_x2", "classical_twin_all_lr_x4", "classical_twin_all_lr_x8", "classical_twin_collapsed16", "classical_twin_collapsed32", "classical_twin_collapsed4", "classical_twin_collapsed8", "classical_twin_grad_x32", "classical_twin_grad_x8", "classical_twin_head_lr_x128", "classical_twin_head_lr_x16", "classical_twin_head_lr_x2", "classical_twin_head_lr_x32", "classical_twin_head_lr_x4", "classical_twin_head_lr_x64", "classical_twin_head_lr_x8", "classical_twin_reuse16", "classical_twin_reuse32", "classical_twin_reuse4", "classical_twin_reuse8"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+diagnostics = true
+
+[[stage]]
+name = "matched_control_with_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["matched_control", "network_no_replication_w18", "network_no_replication_w18_lr_x4", "network_no_replication_w7_lr_x4", "network_no_replication_w7_lr_x4_collapsed"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+diagnostics = true
+arm_overrides.matched_control = { lr_classical = true, lr_classical_R = 4 }
+
+[[stage]]
+name = "ppo"
+algorithm = "ppo"
+environment = "cartpole"
+arms = ["ppo_reference_lr_x16_clip", "ppo_reference_lr_x16_noclip", "ppo_reference_lr_x32_clip", "ppo_reference_lr_x32_modified_clip", "ppo_reference_lr_x32_noclip", "ppo_reference_lr_x4_clip", "ppo_reference_lr_x4_noclip", "ppo_reference_lr_x8_clip", "ppo_reference_lr_x8_modified_clip", "ppo_reference_lr_x8_noclip", "ppo_reference_reuse16_clip", "ppo_reference_reuse16_noclip", "ppo_reference_reuse1_clip", "ppo_reference_reuse1_noclip", "ppo_reference_reuse32_clip", "ppo_reference_reuse32_noclip", "ppo_reference_reuse4_clip", "ppo_reference_reuse4_noclip", "ppo_reference_reuse8_clip", "ppo_reference_reuse8_noclip"]
+seeds = "1-30"
+steps = 100000
+eval_every = 10000
+eval_episodes = 20
+# hyperparameters: REFERENCE_PPO_CONFIG of quantumrl_dissection.training.ppo (the reference study's, none tuned)

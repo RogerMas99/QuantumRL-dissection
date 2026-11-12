@@ -1,0 +1,41 @@
+# RQ3: output reuse on the hybrid agent and on the classical controls (includes the reference control without reuse and the superseded control that replicates its input).
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq3_output_reuse"
+description = "RQ3: output reuse on the hybrid agent and on the classical controls (includes the reference control without reuse and the superseded control that replicates its input)."
+
+[[stage]]
+name = "reference_control_without_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["reference_control_reuse1"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "replicated_control"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["matched_control_replicated16", "matched_control_replicated32", "matched_control_replicated8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[stage]]
+name = "reuse_sweep"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_reuse16", "hybrid_reuse32", "hybrid_reuse4", "hybrid_reuse8", "matched_control_reuse16", "matched_control_reuse32", "matched_control_reuse4", "matched_control_reuse8", "reference_control", "reference_control_reuse16", "reference_control_reuse32", "reference_control_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5

@@ -1,0 +1,2543 @@
+{
+ "classical_twin": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_all_lr_x0p5": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "0.5",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_all_lr_x2": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_all_lr_x4": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_all_lr_x8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_collapsed16": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "16",
+   "lr_head_mult": "16.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_collapsed32": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "32",
+   "lr_head_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_collapsed4": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "4",
+   "lr_head_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_collapsed8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "8",
+   "lr_head_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_grad_x32": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_grad_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_grad_x8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_grad_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x128": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "128.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x16": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "16.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x2": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x32": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x4": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x64": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "64.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_head_lr_x8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_reuse16": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_reuse32": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_reuse4": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_reuse8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8",
+   "twin_bounded": "True",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_unbounded": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "1",
+   "twin_bounded": "False",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_unbounded_reuse16": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16",
+   "twin_bounded": "False",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_unbounded_reuse32": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32",
+   "twin_bounded": "False",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_unbounded_reuse4": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4",
+   "twin_bounded": "False",
+   "twin_hidden": "6"
+  }
+ },
+ "classical_twin_unbounded_reuse8": {
+  "agent_type": "classical_twin",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8",
+   "twin_bounded": "False",
+   "twin_hidden": "6"
+  }
+ },
+ "fourier_ceiling": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "n_layers_q": "5",
+   "n_qubits": "8"
+  }
+ },
+ "fourier_ceiling_distinct": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "lr_classical": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4"
+  }
+ },
+ "fourier_ceiling_distinct_lr_x2": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "lr_classical": "True",
+   "lr_head_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "4"
+  }
+ },
+ "fourier_ceiling_distinct_lr_x2_collapsed": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "lr_classical": "True",
+   "lr_classical_R": "2",
+   "lr_collapse_R": "2",
+   "lr_head_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "8"
+  }
+ },
+ "frozenlake_binary_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "frozenlake_binary_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "frozenlake_binary_linear_ceiling": {
+  "agent_type": "linear_on_bits",
+  "config": {
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "frozenlake_binary_unentangled_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "frozenlake_binary_unentangled_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "frozenlake_bits_network_w12": {
+  "agent_type": "bits_mlp",
+  "config": {
+   "lr_classical": "True",
+   "width": "12"
+  }
+ },
+ "frozenlake_bits_network_w6": {
+  "agent_type": "bits_mlp",
+  "config": {
+   "lr_classical": "True",
+   "width": "6"
+  }
+ },
+ "frozenlake_large_network_scalar": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "net_arch": "[64, 64]"
+  }
+ },
+ "frozenlake_matched_control": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "18",
+   "_hybrid_quantum": "10",
+   "_hybrid_total": "18",
+   "_match_target": "total",
+   "_matched_to": "frozenlake_scalar_depth5",
+   "_spent_params": "22",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "net_arch": "[3]"
+  }
+ },
+ "frozenlake_onehot_reference": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "net_arch": "[64, 64]"
+  }
+ },
+ "frozenlake_scalar_ceiling_depth1": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_ceiling_depth10": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_ceiling_depth15": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "n_layers_q": "15",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_ceiling_depth5": {
+  "agent_type": "fourier_additive",
+  "config": {
+   "circ_type": "skolik",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_depth10": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_depth15": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "15",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "frozenlake_scalar_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "hybrid": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_depth1_reuse16": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "hybrid_depth1_reuse32": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "hybrid_depth1_reuse4": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "hybrid_depth1_reuse8": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "hybrid_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_depth2_reuse16": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "hybrid_depth2_reuse32": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "hybrid_depth2_reuse4": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "hybrid_depth2_reuse8": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "hybrid_reuse16": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "hybrid_reuse32": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "hybrid_reuse4": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "hybrid_reuse8": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "hybrid_unentangled": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_unentangled_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_unentangled_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "hybrid_unentangled_reuse16": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "hybrid_unentangled_reuse32": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "hybrid_unentangled_reuse4": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "hybrid_unentangled_reuse8": {
+  "agent_type": "hybrid",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "large_network": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "net_arch": "[120, 84]"
+  }
+ },
+ "matched_control": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "126",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "126",
+   "_match_target": "total",
+   "_matched_to": "hybrid",
+   "_observation": "full",
+   "_spent_params": "135",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "4",
+   "net_arch": "[7]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_replicated16": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "606",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "606",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse16",
+   "_spent_params": "605",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "16",
+   "net_arch": "[9]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_replicated32": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "1118",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "1118",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse32",
+   "_spent_params": "1181",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "32",
+   "net_arch": "[9]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_replicated8": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "350",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "350",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse8",
+   "_spent_params": "352",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "8",
+   "net_arch": "[10]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_reuse16": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "606",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "606",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse16",
+   "_spent_params": "610",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "4",
+   "net_arch": "[32]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_reuse32": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "1118",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "1118",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse32",
+   "_spent_params": "1123",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "4",
+   "net_arch": "[59]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_reuse4": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "222",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "222",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse4",
+   "_spent_params": "230",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "4",
+   "net_arch": "[12]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "matched_control_reuse8": {
+  "agent_type": "classic",
+  "config": {
+   "_budget": "350",
+   "_hybrid_quantum": "80",
+   "_hybrid_total": "350",
+   "_match_target": "total",
+   "_matched_to": "hybrid_reuse8",
+   "_spent_params": "344",
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "n_repeats": "4",
+   "net_arch": "[18]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "network_no_replication_w18": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "lr_classical": "True",
+   "n_repeats": "1",
+   "net_arch": "[18]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "network_no_replication_w18_lr_x4": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "lr_classical": "True",
+   "lr_head_mult": "4.0",
+   "n_repeats": "1",
+   "net_arch": "[18]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "network_no_replication_w7_lr_x4": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "lr_classical": "True",
+   "lr_head_mult": "4.0",
+   "n_repeats": "1",
+   "net_arch": "[7]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "network_no_replication_w7_lr_x4_collapsed": {
+  "agent_type": "classic",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "lr_classical": "True",
+   "lr_classical_R": "4",
+   "lr_collapse_R": "4",
+   "lr_head_mult": "4.0",
+   "n_repeats": "4",
+   "net_arch": "[7]",
+   "reuse_indices": "[0, 1, 2, 3]"
+  }
+ },
+ "porting_hsiao_reuse16": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_hsiao_reuse16_entangled": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_hsiao_reuse32": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "32",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_hsiao_reuse4": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_hsiao_reuse4_entangled": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_hsiao_reuse8": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "hsiao",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "reuse_repetitions": "8",
+   "transform_fn": "<simplyqrl.transformations.ArctanTransformer>"
+  }
+ },
+ "porting_salinas_1q_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_salinas_1q_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_salinas_1q_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_salinas_2q_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "2",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_salinas_2q_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "2",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_salinas_2q_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "dr",
+   "emb_indices": "[1, 2, 3]",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "2",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_4q_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_4q_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_4q_depth2_unentangled": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_4q_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_4q_depth5_unentangled": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_8q_depth1": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_8q_depth2": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "porting_skolik_8q_depth5": {
+  "agent_type": "hybrid",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "reference_control": {
+  "agent_type": "classic",
+  "config": {
+   "n_repeats": "4",
+   "net_arch": "[]",
+   "reuse_indices": "[1, 2, 3]"
+  }
+ },
+ "reference_control_reuse1": {
+  "agent_type": "classic",
+  "config": {
+   "_env_select": "[1, 2, 3]",
+   "n_repeats": "1",
+   "net_arch": "[]"
+  }
+ },
+ "reference_control_reuse16": {
+  "agent_type": "classic",
+  "config": {
+   "n_repeats": "16",
+   "net_arch": "[]",
+   "reuse_indices": "[1, 2, 3]"
+  }
+ },
+ "reference_control_reuse32": {
+  "agent_type": "classic",
+  "config": {
+   "n_repeats": "32",
+   "net_arch": "[]",
+   "reuse_indices": "[1, 2, 3]"
+  }
+ },
+ "reference_control_reuse8": {
+  "agent_type": "classic",
+  "config": {
+   "n_repeats": "8",
+   "net_arch": "[]",
+   "reuse_indices": "[1, 2, 3]"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth1": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth1_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth1_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth2": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth2_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth2_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth3": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth3_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth3_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_variant_head16": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[16]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_variant_init0p1": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "q_init_std": "0.1",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_variant_init0p5": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "q_init_std": "0.5",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_binary_unentangled_depth5_variant_tis": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "trainable_input_scale": "True",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth1": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_variant_head16": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[16]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_variant_init0p1": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "q_init_std": "0.1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_variant_init0p5": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "q_init_std": "0.5",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth10_variant_tis": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "10",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "trainable_input_scale": "True",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth15": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "15",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth15_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "15",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth15_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "15",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth1_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth1_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_variant_head16": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.activation.ReLU'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[16]",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_variant_init0p1": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "q_init_std": "0.1",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_variant_init0p5": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "q_init_std": "0.5",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_frozenlake_scalar_depth5_variant_tis": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "1",
+   "net_arch": "[]",
+   "trainable_input_scale": "True",
+   "transform_fn": "<simplyqrl.transformations.FrozenNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_hybrid_unentangled": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_depth1": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_depth2": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_output_scale": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "use_output_scaling": "True"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_reuse16": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_reuse16_output_scale": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16",
+   "use_output_scaling": "True"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_reuse32": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_reuse4": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_emulator_hybrid_unentangled_reuse8": {
+  "agent_type": "su2",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_emulator_porting_skolik_4q_depth2_unentangled": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_emulator_porting_skolik_4q_depth5_unentangled": {
+  "agent_type": "su2",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth1_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth1_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth2": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth2_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth2_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth3": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth3_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth3_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "3",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth5": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth5_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "16",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_depth5_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "reuse_repetitions": "4",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_unentangled_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_frozenlake_binary_unentangled_depth5": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "net_arch": "[]",
+   "transform_fn": "<simplyqrl.transformations.FrozenBasisToAngleTransformer>"
+  }
+ },
+ "sim_statevector_hybrid": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_all_lr_x0p5": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "0.5",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_all_lr_x2": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_all_lr_x4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_all_lr_x8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_global_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_collapsed16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "16",
+   "lr_head_mult": "16.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_statevector_hybrid_collapsed32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "32",
+   "lr_head_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_statevector_hybrid_collapsed4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "4",
+   "lr_head_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_statevector_hybrid_collapsed8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_collapse_R": "8",
+   "lr_head_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_statevector_hybrid_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_depth1_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_statevector_hybrid_depth1_reuse32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_statevector_hybrid_depth1_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_statevector_hybrid_depth1_reuse8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_statevector_hybrid_depth2": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_depth2_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_statevector_hybrid_depth2_reuse32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_statevector_hybrid_depth2_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_statevector_hybrid_depth2_reuse8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_statevector_hybrid_grad_x32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_grad_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_grad_x8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_grad_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x128": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "128.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "16.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x2": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "2.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "32.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "4.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x64": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "64.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_head_lr_x8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "lr_head_mult": "8.0",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_statevector_hybrid_reuse32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_statevector_hybrid_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_statevector_hybrid_reuse8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_statevector_hybrid_unentangled": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_depth2": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "net_arch": "[4]"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_reuse16": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "16"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_reuse32": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "32"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_reuse4": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "4"
+  }
+ },
+ "sim_statevector_hybrid_unentangled_reuse8": {
+  "agent_type": "sv",
+  "config": {
+   "activation": "<class 'torch.nn.modules.linear.Identity'>",
+   "circ_type": "skolik",
+   "ent": "False",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "net_arch": "[4]",
+   "reuse_repetitions": "8"
+  }
+ },
+ "sim_statevector_porting_skolik_4q_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_porting_skolik_4q_depth2": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_porting_skolik_4q_depth5": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "4",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_porting_skolik_8q_depth1": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "1",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_porting_skolik_8q_depth2": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "2",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ },
+ "sim_statevector_porting_skolik_8q_depth5": {
+  "agent_type": "sv",
+  "config": {
+   "circ_type": "skolik",
+   "ent": "True",
+   "n_layers_q": "5",
+   "n_qubits": "8",
+   "transform_fn": "<simplyqrl.transformations.CartPoleNormalizationTransformer>"
+  }
+ }
+}

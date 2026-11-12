@@ -1,0 +1,17 @@
+# RQ5: FrozenLake, scalar and binary circuits against classical controls.
+# Generated from the manifests of the campaign: every stage lists what was run.
+
+name = "rq5_frozenlake"
+description = "RQ5: FrozenLake, scalar and binary circuits against classical controls."
+
+[[stage]]
+name = "frozenlake_arms"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_binary_depth1", "frozenlake_binary_depth5", "frozenlake_binary_unentangled_depth1", "frozenlake_binary_unentangled_depth5", "frozenlake_large_network_scalar", "frozenlake_matched_control", "frozenlake_onehot_reference", "frozenlake_scalar_depth1", "frozenlake_scalar_depth10", "frozenlake_scalar_depth15", "frozenlake_scalar_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
