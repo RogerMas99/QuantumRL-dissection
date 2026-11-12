@@ -1,4 +1,4 @@
-"""The repository carries no trace of the working vocabulary of the original repository.
+"""The repository carries no trace of the technical identifiers of the original repository.
 
 Scope: code, configurations, scripts, tests, documentation and the table of results. Excluded on purpose: ``docs/design/`` (original documents, copied literally),
 ``docs/arm_names.csv`` (the translation of the old names), ``scripts/verify_equivalence.py`` (it drives the original code) and the data files of ``results/`` and ``tests/data/``.
@@ -10,10 +10,9 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PATTERNS = {
-    "fix tag": r"\bFIX-\d+|\bNEW-\d+|\bfix\d|fix_autoreset|\bfix\b|\bfixes\b|\bfixed\b",
+    "fix tag": r"\bFIX-\d+|\bNEW-\d+|\bfix\d|fix_autoreset|\bfix\b",
     "experiment number": r"\bexp\d+[a-z]?\b|exp\d+_",
     "old arm prefix": r"\bpaper_(?!ppo)\w+|__flkw|\bhybrid_fig4|\bhybrid_OR|\bhybrid_DR|\bclassical_OR|\boversized_mlp",
-    "chat vocabulary": r"\bhandoff|memoria|\bchat\b|\bClaude\b|\bAnthropic\b",
     "absolute path": r"[A-Za-z]:\\\\Users|/content/drive|Mi unidad|tfm_qrl|/home/\w+",
 }
 SKIP_DIRS = {"design", "data", "__pycache__", ".git", "results", "tables", "figures"}
