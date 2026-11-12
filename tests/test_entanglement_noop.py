@@ -87,7 +87,7 @@ def test_paper_l1_entanglement_rows_are_identical_as_predicted():
     pd = pytest.importorskip("pandas")
     from quantumrl_dissection.analysis.baselines import DATA_DIR
 
-    csv = DATA_DIR / "paper_ppo_baselines.csv"
+    csv = DATA_DIR / "reference_study_ppo_baselines.csv"
     if not csv.exists():
         pytest.skip("paper baselines not extracted")
     df = pd.read_csv(csv)

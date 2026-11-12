@@ -1,6 +1,6 @@
 """The `paper_*` arms must replicate the dissection paper's own configurations.
 
-These arms exist so a cell-for-cell comparison against `data/paper_ppo_*.csv` is
+These arms exist so a cell-for-cell comparison against `results/reference_study/reference_study_ppo_*.csv` is
 possible. That only works if the configs really are theirs, so the values are
 pinned here against the published scripts rather than trusted to stay put.
 
@@ -59,7 +59,7 @@ def test_every_paper_arm_builds(arm):
 def test_every_paper_arm_maps_to_real_results(arm):
     from quantumrl_dissection.analysis.baselines import DATA_DIR, reference_study_results_for_arm
 
-    if not (DATA_DIR / "paper_ppo_summary.csv").exists():
+    if not (DATA_DIR / "reference_study_ppo_summary.csv").exists():
         pytest.skip("paper baselines not extracted")
     row = reference_study_results_for_arm(arm)
     assert row["n_seeds"] == 10

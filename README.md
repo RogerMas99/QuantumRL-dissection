@@ -17,7 +17,7 @@ src/quantumrl_dissection/   circuits/ agents/ simulators/ training/ analysis/ ar
 third_party/simplyqrl/      the library, unmodified (revision b534cc9), with its MIT licence
 configs/                    one file per research question (and the learning-rate experiment, the terminal ablation, the simulators)
 scripts/                    run.py (run a configuration) · make_tables.py · make_figures.py · verify_equivalence.py
-results/                    runs.csv (6,368 runs) and, per configuration, episodes, greedy evaluations, diagnostics; results/reference_study/
+results/                    runs.csv (6,368 runs) and, per configuration, episodes, greedy evaluations, diagnostics; results/reference_study/ and results/verification/
 docs/                       design/ (original design documents) · adjustments.md · reproducibility.md · arm_names.csv · verification.md
 tests/                      the test suite
 ```

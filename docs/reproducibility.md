@@ -53,12 +53,13 @@ is what the double-precision comparisons of that experiment use.
 * **Revision of the code of 150 runs.** The manifests of 140 runs of the first campaign (the reuse sweep: 80; the depth sweep: 30; the depth sweep without
   entanglement: 30) do not record the revision of the code that produced them; neither do the 10 runs of the reference control without reuse (added afterwards; their
   code is the revision `d0aa338` of the original repository). In `results/runs.csv` the column `code_revision` is empty for these 150 runs.
-* **Five groups of runs were launched from a working tree that was committed afterwards.** The manifest records the revision that was checked out when the run
+* **Six groups of runs were launched from a working tree that was committed afterwards.** The manifest records the revision that was checked out when the run
   started; the code that ran was in the working tree and was committed later, as the revision in the last column. `results/runs.csv` keeps the recorded revision in
   `code_revision` and gives the revision that holds the code in `effective_revision`, with the reason in `revision_note`.
 
   | runs | recorded revision | revision that holds the code | runs started (UTC) | commit (UTC) |
   |---|---|---|---|---|
+  | 12 runs of the control matched in parameters to the hybrid with reuse (`rq3_output_reuse`, first three seeds of each reuse factor; the arm does not exist at the recorded revision) | `87557c5` | `b652e8b` | 2026-08-21 14:01 to 14:11 | 2026-08-22 11:19 |
   | 10 runs of the emulator without entanglement used as the reference of the validation (`emulator_reference`; also the first ten seeds of the 100-seed comparison) | `82bb533` | `5ae1011` | 2026-10-20 04:11 to 04:26 | 2026-10-20 04:32 |
   | 30 runs of the classical controls that replicate their input (`rq3_output_reuse`) | `0524a76` | `7e2210f` | 2026-11-06 14:23 to 14:26 | 2026-11-06 14:34 |
   | 100 runs of the classical twin (`rq2_capacity`) | `d80697f` | `6aa668a` | 2026-11-06 15:59 to 16:09 | 2026-11-06 16:11 |
@@ -69,7 +70,7 @@ is what the double-precision comparisons of that experiment use.
   the code of this repository does the latter. The final weights saved by those ten runs are distributed over [0, 2π) (pooled mean 3.25, standard deviation 1.84;
   uniform: 3.14 and 1.81), whereas the runs that started from zero (recorded revision `961548b`, kept in the table with `in_results = false`) end with all their
   weights at exactly zero. The state of the working tree between the start of a run and its commit is not recorded, so that the code that ran cannot be proved identical
-  to the committed code. For the files that the last four groups introduced (the classical twin, the modules of the learning-rate experiment) the committed version is
+  to the committed code. For the files that three of the groups introduced (the classical twin, the modules of the learning-rate experiment) the committed version is
   the only one in the history.
 * **Dating of the runs.** `started_utc` in `results/runs.csv` is the time stamp in the name of the TensorBoard log of the run (the last log when a run has several,
   which are interrupted attempts: 281 of the directories of logs have more than one). For each run the commits that touch the modules that the arm runs on were compared with

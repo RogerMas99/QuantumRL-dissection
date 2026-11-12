@@ -1,0 +1,3 @@
+phase,config,stage,arm,old_label,revision,n_params_old,n_params_new,same_tensors,n_actions,weights_moved,same_actions,first_action_difference,max_weight_difference,status
+full,rq1_porting,porting,porting_salinas_1q_depth1,paper_salinas_1q_L1,15f682f,7,7,True,100001,2.2998531083210083,True,,0.0,OK
+full,rq3_output_reuse,reuse_sweep,reference_control_reuse8,classical_OR8,18e124a,50,50,True,100001,2.248941595468202,True,,0.0,OK

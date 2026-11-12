@@ -48,8 +48,7 @@ def check_table(pages: Sequence[str], caption: str, rows: Sequence[Sequence[str]
         j = caption_page(pages, cap)
         if j is not None:
             sel += list(pages[max(0, j - before): j + after + 1])
-    text = "
-".join(sel)
+    text = "\n".join(sel)
     have = set(numbers(text))
     lines = [set(numbers(ln)) for ln in text.splitlines() if ln.strip()]
     checked, missing, one_line = 0, [], 0

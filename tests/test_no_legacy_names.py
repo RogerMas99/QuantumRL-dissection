@@ -1,7 +1,7 @@
 """The repository carries no trace of the working vocabulary of the original repository.
 
-Scope: code, configurations, scripts, tests, documentation and the table of results. Excluded on purpose: ``docs/design/`` (original documents, copied literally)
-and ``docs/arm_names.csv`` (the translation of the old names), and the data files of ``results/`` and ``tests/data/``.
+Scope: code, configurations, scripts, tests, documentation and the table of results. Excluded on purpose: ``docs/design/`` (original documents, copied literally),
+``docs/arm_names.csv`` (the translation of the old names), ``scripts/verify_equivalence.py`` (it drives the original code) and the data files of ``results/`` and ``tests/data/``.
 """
 from __future__ import annotations
 
@@ -17,7 +17,8 @@ PATTERNS = {
     "absolute path": r"[A-Za-z]:\\\\Users|/content/drive|Mi unidad|tfm_qrl|/home/\w+",
 }
 SKIP_DIRS = {"design", "data", "__pycache__", ".git", "results", "tables", "figures"}
-SKIP_FILES = {"arm_names.csv", "test_no_legacy_names.py"}
+# verify_equivalence.py runs the original code, whose arm labels, module and parameter names it has to use.
+SKIP_FILES = {"arm_names.csv", "test_no_legacy_names.py", "verify_equivalence.py"}
 SUFFIXES = {".py", ".md", ".toml", ".txt", ".cff", ".lock", ".csv"}
 
 
