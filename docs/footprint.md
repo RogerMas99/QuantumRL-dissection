@@ -14,7 +14,7 @@ CodeCarbon 3.3.2, `OfflineEmissionsTracker(country_iso_code="ESP", measure_power
 |---|---|---|
 | CPU | Windows Energy Meter Interface (RAPL-like package counters) | **measurement** (no TDP) |
 | GPU | `pynvml` (NVML) | **measurement** (about 9 W at idle) |
-| RAM | estimation model: 4 modules x 5 W (17-64 GB -> 4 modules) = 20 W fixed | **estimate** |
+| RAM | estimation model: 4 modules x 5 W (17-64 GB -> 4 modules) = a constant 20 W | **estimate** |
 
 Carbon intensity of Spain: **0.17405 kg CO2-eq/kWh** (174.05 g/kWh), from the `global_energy_mix.json` file shipped with CodeCarbon (year 2023); according to its documentation it comes from Our World in Data / Ember (life cycle). Methodology: <https://docs.codecarbon.io/latest/explanation/methodology/>.
 
@@ -101,7 +101,7 @@ Variants of this part (all with the calibrated measurement):
 - **CPU + RAM only, without the idle GPU**: 38.5 kWh, **6.70 kg**.
 - **Everything CodeCarbon measures (whole machine, idle GPU included)**: 47.8 kWh, **8.32 kg**.
 
-RAM is a CodeCarbon estimate (20 W fixed), not a measurement; it accounts for 0.004 kWh of the 0.0085-0.017 kWh of each measurement.
+RAM is a CodeCarbon estimate (a constant 20 W), not a measurement; it accounts for 0.004 kWh of the 0.0085-0.017 kWh of each measurement.
 
 ### 4.2 Hours on Colab: assumption, not measurement
 
