@@ -13,3 +13,6 @@ tensorboard/
 # outputs of scripts/make_tables.py and scripts/make_figures.py
 /tables/
 /figures/
+# local virtual environments
+venv_test/
+.venv/

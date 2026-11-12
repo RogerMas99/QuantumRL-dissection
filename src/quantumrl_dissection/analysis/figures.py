@@ -307,15 +307,15 @@ def fig_depth(R: Results, out: str) -> None:
     """Figure 4.5: reuploading depth on the eight-qubit Skolik template, DQN (this work) and PPO (reference study)."""
     _style({"legend.fontsize": 7.5})
     grid = np.arange(1000, 100001, 1000)
-    cols = {1: "#B7C8E8", 2: "#6F8FD0", 5: "#1F3B8F"}
+    cols = {1: "#B9CBE6", 2: "#5F86C2", 5: "#1F3B8F"}
     paper = _paper_ma50(R, [f"Skolik_8Q_L{L}" for L in (1, 2, 5)], grid)
-    fig, axs = plt.subplots(1, 2, figsize=(7.1, 2.32), sharey=True, gridspec_kw={"wspace": 0.04})
+    fig, axs = plt.subplots(1, 2, figsize=(7.1, 2.32), sharey=True, gridspec_kw={"wspace": 0.09})
     for L in (1, 2, 5):
         M = curves_ma50(R, depth_selector(True, L), grid)
         for ax, MM in ((axs[0], M), (axs[1], paper[f"Skolik_8Q_L{L}"])):
             m, lo, hi = _curve(MM, B=4000)
-            ax.fill_between(grid / 1e3, lo, hi, color=cols[L], alpha=0.25, lw=0, zorder=1)
-            ax.plot(grid / 1e3, m, color=cols[L], lw=1.4, label=f"$L = {L}$", zorder=3)
+            ax.fill_between(grid / 1e3, lo, hi, color=cols[L], alpha=0.15, lw=0, zorder=1)
+            ax.plot(grid / 1e3, m, color=cols[L], lw=1.6, label=f"$L = {L}$", zorder=3)
     for ax, title in zip(axs, ["(a) DQN, this work", "(b) PPO, reference study"]):
         _random_band(ax)
         ax.set_title(title, loc="left", pad=5)
@@ -323,6 +323,8 @@ def fig_depth(R: Results, out: str) -> None:
         ax.set_xlabel(r"environment steps ($\times 10^3$)")
         ax.grid(axis="y", color="#E3E3E3", lw=0.6, zorder=0)
         ax.set_axisbelow(True)
+    axs[1].spines["left"].set_visible(False)
+    axs[1].tick_params(axis="y", length=0)
     axs[0].legend(loc="upper left", frameon=False, handlelength=1.6, borderaxespad=0.2, labelspacing=0.3)
     axs[0].set_ylabel("training return (50-episode mean)")
     axs[0].set_ylim(0, None)
@@ -427,10 +429,10 @@ def fig_key_contrasts(R: Results, out: str) -> None:
     _style({"ytick.labelsize": 7.5, "xtick.labelsize": 7.5})
     rows = key_contrasts(R)
     fig, ax = plt.subplots(figsize=(5.9, 4.6))
-    ax.axvspan(0, 0.05, color="#DCE6F5", lw=0, zorder=0)
-    ax.axvspan(0.95, 1.0, color="#DCE6F5", lw=0, zorder=0)
-    ax.axvspan(0.35, 0.65, color="#F0F0F0", lw=0, zorder=0)
-    ax.axvline(0.5, color="#777777", lw=0.8, ls=(0, (4, 3)), zorder=1)
+    ax.axvspan(0, 0.05, color="#E3ECF7", lw=0, zorder=0)
+    ax.axvspan(0.95, 1.0, color="#E3ECF7", lw=0, zorder=0)
+    ax.axvspan(0.35, 0.65, color="#F2F2F2", lw=0, zorder=0)
+    ax.axvline(0.5, color="#9A9A9A", lw=0.7, ls=(0, (4, 3)), zorder=1)
     y, ys, labels, gaps = 0.0, [], [], {}
     prev = None
     for rq, label, pt, pg in rows:
@@ -439,7 +441,7 @@ def fig_key_contrasts(R: Results, out: str) -> None:
         gaps.setdefault(rq, []).append(y)
         ys.append(y)
         labels.append(label)
-        ax.plot([min(pt, pg), max(pt, pg)], [y, y], color="#8FA3CC", lw=0.8, zorder=2)
+        ax.plot([min(pt, pg), max(pt, pg)], [y, y], color="#C8C8C8", lw=1.0, zorder=2)
         ax.scatter([pt], [y], s=14, color=BLUE, zorder=3)
         ax.scatter([pg], [y], s=22, marker="D", facecolor="white", edgecolor=BLUE, lw=1.0, zorder=3)
         y += 1.0

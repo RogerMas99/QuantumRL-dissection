@@ -46,8 +46,12 @@ Two checks that were run while the repository was built, from the data record th
 * One ceiling of FrozenLake (the linear one on the binary encoding) builds single-precision buffers in both codes and was traced in single precision; the arm of the terminal-handling
   ablation and the arms of the pilot take the name of the arm that they repeat.
 * The comparison with the thesis (`make_tables.py --pdf`) is a check of presence: it looks each number up in the text of the page. Of the tables, E.5 and F.1 differ in one number each
-  (an interval of 0.67 to 0.80 against 0.66 to 0.80, and 0.5 hours of simulator time against 0.6), and table 4.3 prints only part of the ranges that are computed (the rest is in table E.1,
-  which matches).
+  (an interval of 0.67 to 0.80 against 0.66 to 0.80, and 0.5 hours of simulator time against 0.6; the cell of F.1 is 0.547 hours, the 20 runs of the SU(2) emulator, discarded ones included,
+  see `docs/run_reconciliation.md`), and table 4.3 prints only part of the ranges that are computed (the rest is in table E.1, which matches).
+* Figures 4.5 and 4.7 were also compared with the vector paths of the printed figures. In figure 4.5 the central lines (IQM of the 50-episode moving average) coincide to at most 0.06 units of
+  return in both panels, and the bands are the 95% percentile bootstrap interval of the IQM, as the caption states; the bands of the printed figure and of this repository differ by at most
+  3.5 units at any point, which is the size of the resampling noise of a bootstrap of 4,000 resamples with ten seeds (the seed of the printed one is not recorded). The style (colours, transparency
+  and width of the lines) follows the printed figure. In figure 4.7 the connectors and the shaded bands take the colours of the printed figure; the labels of the research questions are placed differently.
 
 ## Repeat
 
