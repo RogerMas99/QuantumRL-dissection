@@ -16,3 +16,6 @@ tensorboard/
 # local virtual environments
 venv_test/
 .venv/
+
+# CodeCarbon calibration runs (raw outputs of scripts/footprint/calibrate.py)
+calibration_runs/
