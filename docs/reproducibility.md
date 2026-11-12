@@ -53,9 +53,32 @@ is what the double-precision comparisons of that experiment use.
 * **Revision of the code of 150 runs.** The manifests of 140 runs of the first campaign (the reuse sweep: 80; the depth sweep: 30; the depth sweep without
   entanglement: 30) do not record the revision of the code that produced them; neither do the 10 runs of the reference control without reuse (added afterwards; their
   code is the revision `d0aa338` of the original repository). In `results/runs.csv` the column `code_revision` is empty for these 150 runs.
-* **The learning-rate experiment was launched from a working tree that was committed afterwards.** The 2,130 manifests of that experiment record the revision
-  `339f2a4` of the original repository, a commit that contains only a README; the code that produced the runs was committed in `3be15be` the next day. The
-  code of this repository corresponds to `3be15be`.
+* **Five groups of runs were launched from a working tree that was committed afterwards.** The manifest records the revision that was checked out when the run
+  started; the code that ran was in the working tree and was committed later, as the revision in the last column. `results/runs.csv` keeps the recorded revision in
+  `code_revision` and gives the revision that holds the code in `effective_revision`, with the reason in `revision_note`.
+
+  | runs | recorded revision | revision that holds the code | runs started (UTC) | commit (UTC) |
+  |---|---|---|---|---|
+  | 10 runs of the emulator without entanglement used as the reference of the validation (`emulator_reference`; also the first ten seeds of the 100-seed comparison) | `82bb533` | `5ae1011` | 2026-10-20 04:11 to 04:26 | 2026-10-20 04:32 |
+  | 30 runs of the classical controls that replicate their input (`rq3_output_reuse`) | `0524a76` | `7e2210f` | 2026-11-06 14:23 to 14:26 | 2026-11-06 14:34 |
+  | 100 runs of the classical twin (`rq2_capacity`) | `d80697f` | `6aa668a` | 2026-11-06 15:59 to 16:09 | 2026-11-06 16:11 |
+  | 2,130 runs of the learning-rate experiment | `339f2a4` | `3be15be` | 2026-11-06 19:44 to 2026-11-07 13:07 | 2026-11-07 14:42 |
+  | 10 runs of the reference control without reuse | none | `d0aa338` | 2026-11-08 10:25 to 10:28 | 2026-11-08 10:29 |
+
+  In the first group the difference matters: at `82bb533` the emulator initializes its weights at zero, in `5ae1011` uniformly in [0, 2π) as the real circuit does;
+  the code of this repository does the latter. The final weights saved by those ten runs are distributed over [0, 2π) (pooled mean 3.25, standard deviation 1.84;
+  uniform: 3.14 and 1.81), whereas the runs that started from zero (recorded revision `961548b`, kept in the table with `in_results = false`) end with all their
+  weights at exactly zero. The state of the working tree between the start of a run and its commit is not recorded, so that the code that ran cannot be proved identical
+  to the committed code. For the files that the last four groups introduced (the classical twin, the modules of the learning-rate experiment) the committed version is
+  the only one in the history.
+* **Dating of the runs.** `started_utc` in `results/runs.csv` is the time stamp in the name of the TensorBoard log of the run (the last log when a run has several,
+  which are interrupted attempts: 281 of the directories of logs have more than one). For each run the commits that touch the modules that the arm runs on were compared with
+  that date. Apart from the first group above, every such commit that was made after a run started, or that is contained in the recorded revision but was made after the run started
+  (31 runs: 9 of the FrozenLake experiment, up to 24 hours before the commit of their recorded revision, and 22 of the simulator validation, minutes before it), only adds
+  arms, options or files: no behaviour of an existing arm changes (`revision_note` says so for those runs). Before the vendored copy of the library was added to the repository
+  (2026-08-05), the 27 runs without a recorded revision that started earlier (reuse sweep and depth sweep, from 2026-07-28) ran with a copy of SimplyQRL whose revision is not
+  recorded. The messages of the four commits of the upstream repository after 2025-06-25 (up to `b534cc9`, 2025-10-31) describe documentation, licence and citation changes, but
+  the revision that those runs used is not determinable.
 * **The hardware of the runs on Colab** (processor, accelerator, session) and the **versions of the software on Colab** (the manifests store only the version of Python:
   3.12 and 3.13 on Colab, 3.11.15 on the personal computer). `results/runs.csv` records, in `log_origin`, where each run wrote its logs (`colab` or `local`), which
   indicates where it ran without proving it. The personal computer was an AMD Ryzen AI 7 350 (8 cores, 16 threads), 31 GB, CPU only.
