@@ -1,0 +1,434 @@
+# The experiments of the study. Each stage runs a list of arms on a list of seeds with one protocol:
+#   algorithm            "dqn" or "ppo"
+#   environment          "cartpole" or "frozenlake"
+#   arms, seeds          arm names (src/quantumrl_dissection/arms.py) and seeds ("1-10", "11-100")
+#   steps, eval_every, eval_episodes
+#   dqn                  DQN hyperparameters that differ from the library defaults
+#   terminal_adjustment  false runs the arm with the adjustment disabled
+#   seed_sampler         seed the exploration sampler with the seed of the run (learning-rate variants)
+#   arm_overrides        per-arm overrides of the configuration of the arm
+
+[[experiment]]
+name = "rq1_porting"
+description = "RQ1: the 24 configurations of the reference study run under DQN without modification (the classical control of the reference study is the reference control)."
+
+[[experiment.stage]]
+name = "porting"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["porting_hsiao_reuse16", "porting_hsiao_reuse16_entangled", "porting_hsiao_reuse32", "porting_hsiao_reuse4", "porting_hsiao_reuse4_entangled", "porting_hsiao_reuse8", "porting_salinas_1q_depth1", "porting_salinas_1q_depth2", "porting_salinas_1q_depth5", "porting_salinas_2q_depth1", "porting_salinas_2q_depth2", "porting_salinas_2q_depth5", "porting_skolik_4q_depth1", "porting_skolik_4q_depth2", "porting_skolik_4q_depth2_unentangled", "porting_skolik_4q_depth5", "porting_skolik_4q_depth5_unentangled", "porting_skolik_8q_depth1", "porting_skolik_8q_depth2", "porting_skolik_8q_depth5", "reference_control", "reference_control_reuse16", "reference_control_reuse32", "reference_control_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "rq2_capacity"
+description = "RQ2: the capacity ladder against the hybrid agent, and the classical twin."
+
+[[experiment.stage]]
+name = "capacity_ladder"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid", "large_network", "matched_control", "reference_control"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "classical_twin"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["classical_twin", "classical_twin_reuse16", "classical_twin_reuse32", "classical_twin_reuse4", "classical_twin_reuse8", "classical_twin_unbounded", "classical_twin_unbounded_reuse16", "classical_twin_unbounded_reuse32", "classical_twin_unbounded_reuse4", "classical_twin_unbounded_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment]]
+name = "rq3_output_reuse"
+description = "RQ3: output reuse on the hybrid agent and on the classical controls (includes the reference control without reuse and the superseded control that replicates its input)."
+
+[[experiment.stage]]
+name = "reference_control_without_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["reference_control_reuse1"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "replicated_control"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["matched_control_replicated16", "matched_control_replicated32", "matched_control_replicated8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "reuse_sweep"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_reuse16", "hybrid_reuse32", "hybrid_reuse4", "hybrid_reuse8", "matched_control_reuse16", "matched_control_reuse32", "matched_control_reuse4", "matched_control_reuse8", "reference_control", "reference_control_reuse16", "reference_control_reuse32", "reference_control_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment]]
+name = "rq3_depth"
+description = "RQ3: reuploading depth, and its crossing with output reuse."
+
+[[experiment.stage]]
+name = "depth_reuse_crossing"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_depth1_reuse16", "hybrid_depth1_reuse32", "hybrid_depth1_reuse4", "hybrid_depth1_reuse8", "hybrid_depth2_reuse16", "hybrid_depth2_reuse32", "hybrid_depth2_reuse4", "hybrid_depth2_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "depth_sweep"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid", "hybrid_depth1", "hybrid_depth2"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment]]
+name = "rq3_entanglement"
+description = "RQ3: entanglement; every arm of the depth and reuse sweeps has an unentangled counterpart."
+
+[[experiment.stage]]
+name = "depth_sweep_unentangled"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_unentangled", "hybrid_unentangled_depth1", "hybrid_unentangled_depth2"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "reuse_sweep_unentangled"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid_unentangled", "hybrid_unentangled_reuse16", "hybrid_unentangled_reuse32", "hybrid_unentangled_reuse4", "hybrid_unentangled_reuse8"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "rq4_ceilings"
+description = "RQ4: additive Fourier ceilings of the unentangled circuits (CartPole and FrozenLake)."
+
+[[experiment.stage]]
+name = "cartpole_ceiling"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["fourier_ceiling"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "frozenlake_ceilings"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_binary_linear_ceiling", "frozenlake_scalar_ceiling_depth1", "frozenlake_scalar_ceiling_depth10", "frozenlake_scalar_ceiling_depth15", "frozenlake_scalar_ceiling_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "rq5_frozenlake"
+description = "RQ5: FrozenLake, scalar and binary circuits against classical controls."
+
+[[experiment.stage]]
+name = "frozenlake_arms"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_binary_depth1", "frozenlake_binary_depth5", "frozenlake_binary_unentangled_depth1", "frozenlake_binary_unentangled_depth5", "frozenlake_large_network_scalar", "frozenlake_matched_control", "frozenlake_onehot_reference", "frozenlake_scalar_depth1", "frozenlake_scalar_depth10", "frozenlake_scalar_depth15", "frozenlake_scalar_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "terminal_ablation"
+description = "Ablation of the terminal adjustment: the arms of the capacity and FrozenLake experiments with the adjustment disabled."
+
+[[experiment.stage]]
+name = "capacity_ladder_no_terminal_adjustment"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["hybrid", "large_network", "matched_control", "reference_control"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "frozenlake_arms_no_terminal_adjustment"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_large_network_scalar", "frozenlake_matched_control", "frozenlake_onehot_reference"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "simulator_validation"
+description = "Validation of the simulators against the real circuit (simulator runs; never the real circuit)."
+
+[[experiment.stage]]
+name = "emulator_reference"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_emulator_hybrid_unentangled"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "validation_battery_cartpole"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_emulator_hybrid_unentangled_depth1", "sim_emulator_hybrid_unentangled_depth2", "sim_emulator_hybrid_unentangled_reuse16", "sim_emulator_hybrid_unentangled_reuse32", "sim_emulator_hybrid_unentangled_reuse4", "sim_emulator_hybrid_unentangled_reuse8", "sim_emulator_porting_skolik_4q_depth2_unentangled", "sim_emulator_porting_skolik_4q_depth5_unentangled", "sim_statevector_hybrid", "sim_statevector_hybrid_depth1", "sim_statevector_hybrid_depth1_reuse16", "sim_statevector_hybrid_depth1_reuse32", "sim_statevector_hybrid_depth1_reuse4", "sim_statevector_hybrid_depth1_reuse8", "sim_statevector_hybrid_depth2", "sim_statevector_hybrid_depth2_reuse16", "sim_statevector_hybrid_depth2_reuse32", "sim_statevector_hybrid_depth2_reuse4", "sim_statevector_hybrid_depth2_reuse8", "sim_statevector_hybrid_reuse16", "sim_statevector_hybrid_reuse32", "sim_statevector_hybrid_reuse4", "sim_statevector_hybrid_reuse8", "sim_statevector_hybrid_unentangled", "sim_statevector_porting_skolik_4q_depth1", "sim_statevector_porting_skolik_4q_depth2", "sim_statevector_porting_skolik_4q_depth5", "sim_statevector_porting_skolik_8q_depth1", "sim_statevector_porting_skolik_8q_depth2", "sim_statevector_porting_skolik_8q_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "validation_battery_frozenlake_1"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_emulator_frozenlake_binary_unentangled_depth1", "sim_emulator_frozenlake_binary_unentangled_depth5", "sim_emulator_frozenlake_scalar_depth10", "sim_emulator_frozenlake_scalar_depth15", "sim_emulator_frozenlake_scalar_depth5", "sim_statevector_frozenlake_binary_depth1", "sim_statevector_frozenlake_binary_unentangled_depth1", "sim_statevector_frozenlake_binary_unentangled_depth5"]
+seeds = "1-10"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "validation_battery_frozenlake_2"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_statevector_frozenlake_binary_depth5"]
+seeds = "1-20"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "additional_x100"
+description = "Additional results with 100 seeds on the simulators (simulator runs; never the real circuit). Some seeds are runs of other experiments, listed in the column also_used_in of results/runs.csv.gz."
+
+[[experiment.stage]]
+name = "x100_cartpole_1"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_emulator_hybrid_unentangled", "sim_emulator_hybrid_unentangled_reuse16", "sim_emulator_hybrid_unentangled_reuse32", "sim_emulator_hybrid_unentangled_reuse4", "sim_emulator_hybrid_unentangled_reuse8", "sim_statevector_hybrid", "sim_statevector_hybrid_depth1", "sim_statevector_hybrid_depth2", "sim_statevector_hybrid_depth2_reuse16", "sim_statevector_hybrid_depth2_reuse32", "sim_statevector_hybrid_depth2_reuse4", "sim_statevector_hybrid_depth2_reuse8", "sim_statevector_hybrid_reuse16", "sim_statevector_hybrid_reuse32", "sim_statevector_hybrid_reuse4", "sim_statevector_hybrid_reuse8", "sim_statevector_hybrid_unentangled"]
+seeds = "11-100"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "x100_cartpole_2"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_statevector_hybrid_unentangled_depth1", "sim_statevector_hybrid_unentangled_depth2", "sim_statevector_hybrid_unentangled_reuse16", "sim_statevector_hybrid_unentangled_reuse32", "sim_statevector_hybrid_unentangled_reuse4", "sim_statevector_hybrid_unentangled_reuse8"]
+seeds = "1-100"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "x100_frozenlake_1"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_statevector_frozenlake_binary_depth5"]
+seeds = "21-100"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment.stage]]
+name = "x100_frozenlake_2"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["sim_statevector_frozenlake_binary_unentangled_depth5"]
+seeds = "11-100"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "lr_experiment"
+description = "Output reuse against the learning rate of the head: DQN (classical twin, hybrid on the state-vector simulator, classical models that contain output reuse, networks on the bits) and PPO."
+
+[[experiment.stage]]
+name = "bits_networks"
+algorithm = "dqn"
+environment = "frozenlake"
+arms = ["frozenlake_bits_network_w12", "frozenlake_bits_network_w6"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 50000, learning_starts = 1000, train_frequency = 1 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+seed_sampler = true
+
+[[experiment.stage]]
+name = "ceiling_with_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["fourier_ceiling", "fourier_ceiling_distinct", "fourier_ceiling_distinct_lr_x2", "fourier_ceiling_distinct_lr_x2_collapsed"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+seed_sampler = true
+arm_overrides = { fourier_ceiling = { lr_classical = true, lr_classical_R = 2 } }
+
+[[experiment.stage]]
+name = "dqn_simulator_hybrid"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["sim_statevector_hybrid", "sim_statevector_hybrid_collapsed16", "sim_statevector_hybrid_collapsed32", "sim_statevector_hybrid_collapsed4", "sim_statevector_hybrid_collapsed8", "sim_statevector_hybrid_grad_x32", "sim_statevector_hybrid_grad_x8", "sim_statevector_hybrid_head_lr_x128", "sim_statevector_hybrid_head_lr_x16", "sim_statevector_hybrid_head_lr_x2", "sim_statevector_hybrid_head_lr_x32", "sim_statevector_hybrid_head_lr_x4", "sim_statevector_hybrid_head_lr_x64", "sim_statevector_hybrid_head_lr_x8", "sim_statevector_hybrid_reuse16", "sim_statevector_hybrid_reuse32", "sim_statevector_hybrid_reuse4", "sim_statevector_hybrid_reuse8"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+seed_sampler = true
+
+[[experiment.stage]]
+name = "dqn_twin"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["classical_twin", "classical_twin_all_lr_x0p5", "classical_twin_all_lr_x2", "classical_twin_all_lr_x4", "classical_twin_all_lr_x8", "classical_twin_collapsed16", "classical_twin_collapsed32", "classical_twin_collapsed4", "classical_twin_collapsed8", "classical_twin_grad_x32", "classical_twin_grad_x8", "classical_twin_head_lr_x128", "classical_twin_head_lr_x16", "classical_twin_head_lr_x2", "classical_twin_head_lr_x32", "classical_twin_head_lr_x4", "classical_twin_head_lr_x64", "classical_twin_head_lr_x8", "classical_twin_reuse16", "classical_twin_reuse32", "classical_twin_reuse4", "classical_twin_reuse8"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+seed_sampler = true
+
+[[experiment.stage]]
+name = "matched_control_with_reuse"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["matched_control", "network_no_replication_w18", "network_no_replication_w18_lr_x4", "network_no_replication_w7_lr_x4", "network_no_replication_w7_lr_x4_collapsed"]
+seeds = "1-30"
+steps = 100000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 20
+seed_sampler = true
+arm_overrides = { matched_control = { lr_classical = true, lr_classical_R = 4 } }
+
+[[experiment.stage]]
+name = "ppo"
+algorithm = "ppo"
+environment = "cartpole"
+arms = ["ppo_reference_lr_x16_clip", "ppo_reference_lr_x16_noclip", "ppo_reference_lr_x32_clip", "ppo_reference_lr_x32_modified_clip", "ppo_reference_lr_x32_noclip", "ppo_reference_lr_x4_clip", "ppo_reference_lr_x4_noclip", "ppo_reference_lr_x8_clip", "ppo_reference_lr_x8_modified_clip", "ppo_reference_lr_x8_noclip", "ppo_reference_reuse16_clip", "ppo_reference_reuse16_noclip", "ppo_reference_reuse1_clip", "ppo_reference_reuse1_noclip", "ppo_reference_reuse32_clip", "ppo_reference_reuse32_noclip", "ppo_reference_reuse4_clip", "ppo_reference_reuse4_noclip", "ppo_reference_reuse8_clip", "ppo_reference_reuse8_noclip"]
+seeds = "1-30"
+steps = 100000
+eval_every = 10000
+eval_episodes = 20
+
+[[experiment]]
+name = "pilot_60k"
+description = "Pilot of the capacity ladder with 60,000 steps (no tables in the study)."
+
+[[experiment.stage]]
+name = "pilot_60k_cartpole_1"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["large_network", "matched_control", "reference_control"]
+seeds = "1-3"
+steps = 60000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = false
+eval_every = 10000
+eval_episodes = 5
+
+[[experiment.stage]]
+name = "pilot_60k_cartpole_2"
+algorithm = "dqn"
+environment = "cartpole"
+arms = ["large_network", "matched_control", "reference_control"]
+seeds = "1-3"
+steps = 60000
+dqn = { batch_size = 128, buffer_size = 10000, train_frequency = 10 }
+terminal_adjustment = true
+eval_every = 10000
+eval_episodes = 5

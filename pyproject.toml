@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantumrl-dissection"
+version = "1.0.0"
+description = "Component-based evaluation of parametrized quantum circuits in reinforcement learning: from PPO to DQN, across configurations and environments"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Roger Mas Bosch" }]
+dependencies = [
+    "simplyqrl @ git+https://github.com/javier-lazaro/SimplyQRL@b534cc9ee60426138eb5ba060312d21d35d12658",
+    "autoray==0.7.1",
+    "cloudpickle==3.1.2",
+    "gymnasium==1.1.1",
+    "matplotlib==3.11.1",
+    "numpy==2.4.6",
+    "pandas==3.0.5",
+    "pennylane==0.41.1",
+    "pennylane-lightning==0.41.1",
+    "tensorboard==2.21.0",
+    "torch==2.13.0",
+    "tqdm==4.70.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
